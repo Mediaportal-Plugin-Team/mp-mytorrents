@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  MyTorrents search configuration (2026 update)
+  Copy to C:\ProgramData\Team MediaPortal\MediaPortal\MyTorrents.xml
+
+  Searching is done through Jackett (https://github.com/Jackett/Jackett).
+  Jackett keeps the site-specific scrapers up to date, so this file no longer
+  needs a hand-written regex for every torrent site.
+
+  1. Install Jackett, open http://127.0.0.1:9117 and add the indexers (sites) you use.
+  2. Copy the API Key shown at the top right of the Jackett page into <apikey> below.
+  Every indexer you add in Jackett then appears as a search engine in MyTorrents,
+  plus "Jackett (all indexers)" which searches all of them in one go.
+-->
+<config>
+	<jackett>
+		<enabled>true</enabled>
+		<url>http://127.0.0.1:9117</url>
+		<apikey></apikey>
+	</jackett>
+
+	<!-- Highlight icons shown next to search results whose title contains the key -->
+	<iconmapping>
+		<map><key>divx</key><icon>Logos\divx.png</icon></map>
+		<map><key>xvid</key><icon>Logos\xvid.png</icon></map>
+		<map><key>dts</key><icon>Logos\dts.png</icon></map>
+		<map><key>hdtv</key><icon>Logos\hd.png</icon></map>
+		<map><key>720p</key><icon>Logos\720p.png</icon></map>
+		<map><key>1080i</key><icon>Logos\1080i.png</icon></map>
+		<map><key>1080p</key><icon>Logos\1080p.png</icon></map>
+		<map><key>2160p</key><icon>Logos\4k.png</icon></map>
+		<map><key>x265</key><icon>Logos\hevc.png</icon></map>
+		<map><key>hevc</key><icon>Logos\hevc.png</icon></map>
+		<map><key>mp3</key><icon>Logos\MPEG AUDIO VERSION 1 LAYER 3.png</icon></map>
+		<map><key>flac</key><icon>Logos\flac.png</icon></map>
+		<map><key>bluray</key><icon>Logos\bluray.png</icon></map>
+		<map><key>bd rip</key><icon>Logos\bluray.png</icon></map>
+	</iconmapping>
+
+	<!--
+	  RSS / Atom feeds. Jackett can turn any indexer search into a feed, e.g.
+	  <rss>
+	    <title>My show</title>
+	    <url>http://127.0.0.1:9117/api/v2.0/indexers/all/results/torznab/api?apikey=YOURKEY&amp;t=search&amp;q=my+show+1080p</url>
+	  </rss>
+	-->
+	<feed>
+	</feed>
+
+	<!--
+	  Your own sites (easiest to add in MediaPortal Configuration > My Torrents > Config > Search sites).
+	  Put %search% in the address where the search words go. Example:
+	  <site><name>Example</name><url>https://example.org/search?q=%search%</url><enabled>true</enabled></site>
+	-->
+	<sites>
+	</sites>
+
+	<searchengines>
+		<!-- Used when MP-TVSeries (or another plugin) opens MyTorrents to search for an episode.
+		     Jackett (all indexers) and every enabled site under <sites> are added automatically. -->
+		<engine>
+			<name>@mptvseries</name>
+			<addengine>Jackett (all indexers)</addengine>
+			<sort>
+				<name>Default</name>
+				<itype>Default</itype>
+				<iname>Seeds</iname>
+			</sort>
+			<enabled>true</enabled>
+		</engine>
+	</searchengines>
+</config>

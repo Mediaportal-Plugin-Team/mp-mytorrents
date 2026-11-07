@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="Common.Utils"><HintPath>$(MPDir)Common.Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Utils"><HintPath>$(MPDir)Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Databases"><HintPath>$(MPDir)Databases.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
