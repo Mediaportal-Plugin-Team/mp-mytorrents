@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>MyTorrents Configuration</AssemblyName>
+    <RootNamespace>Sohvaperuna.MyTorrentsConfig</RootNamespace>
+    <ApplicationIcon>MyTorrents.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Utils"><HintPath>$(MPDir)Utils.dll</HintPath><Private>false</Private></Reference>
+    <ProjectReference Include="..\MyTorrents\MyTorrents.csproj"><Private>false</Private></ProjectReference>
+    <ProjectReference Include="..\TorrentSearch\TorrentSearch.csproj"><Private>false</Private></ProjectReference>
+  </ItemGroup>
+</Project>

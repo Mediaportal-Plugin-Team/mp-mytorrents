@@ -1,0 +1,17 @@
+<Project>
+  <!-- Shared settings: .NET Framework 4.7.2 (what MediaPortal 1.38 targets), AnyCPU so it loads in 64-bit MP -->
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutomaticallyUseReferenceAssemblyPackages>false</AutomaticallyUseReferenceAssemblyPackages>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\</OutputPath>
+    <MPDir>$(MSBuildThisFileDirectory)lib\MediaPortal\</MPDir>
+    <NoWarn>$(NoWarn);CS0618;CS0612;CS0168;CS0219;CS0414;CS0649;CS0169;CS0162</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(OS)' != 'Windows_NT'">
+    <FrameworkPathOverride>/usr/lib/mono/4.7.2-api</FrameworkPathOverride>
+  </PropertyGroup>
+</Project>
