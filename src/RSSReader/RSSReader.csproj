@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="Common.Utils"><HintPath>$(MPDir)Common.Utils.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

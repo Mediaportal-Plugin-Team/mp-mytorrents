@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Core"><HintPath>$(MPDir)Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Utils"><HintPath>$(MPDir)Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Common.Utils"><HintPath>$(MPDir)Common.Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Databases"><HintPath>$(MPDir)Databases.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Dialogs"><HintPath>$(MPDir)Dialogs.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="TraktPlugin"><HintPath>$(MPDir)TraktPlugin.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="TraktAPI"><HintPath>$(MPDir)TraktAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MP-TVSeries"><HintPath>$(MPDir)MP-TVSeries.dll</HintPath><Private>false</Private></Reference>
+    <ProjectReference Include="..\TorrentEngine\TorrentEngine.csproj" />
+    <ProjectReference Include="..\RSSReader\RSSReader.csproj" />
+    <ProjectReference Include="..\TorrentSearch\TorrentSearch.csproj" />
+    <ProjectReference Include="..\AzureusEngine\AzureusEngine.csproj" />
+    <ProjectReference Include="..\UTorrentEngine\UTorrentEngine.csproj" />
+    <ProjectReference Include="..\DelugeEngine\DelugeEngine.csproj" />
+    <ProjectReference Include="..\QBittorrentEngine\QBittorrentEngine.csproj" />
+    <ProjectReference Include="..\TransmissionEngine\TransmissionEngine.csproj" />
+  </ItemGroup>
+</Project>

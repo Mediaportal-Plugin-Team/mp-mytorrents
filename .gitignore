@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.mpe1
+NOTES.md
+lib/MediaPortal/MP-TVSeries.dll
+tools/X265Cleanup/

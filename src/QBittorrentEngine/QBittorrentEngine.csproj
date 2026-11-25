@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Core" />
+    <Reference Include="Common.Utils"><HintPath>$(MPDir)Common.Utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Utils"><HintPath>$(MPDir)Utils.dll</HintPath><Private>false</Private></Reference>
+    <ProjectReference Include="..\TorrentEngine\TorrentEngine.csproj" />
+  </ItemGroup>
+</Project>
